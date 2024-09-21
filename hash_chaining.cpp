@@ -205,6 +205,26 @@ public:
 };
 
 int main() {
+    TablaHash<int, string> tabla;
+
+    tabla.insert(1, "a1");
+    tabla.insert(2, "b2");
+    tabla.insert(3, "c3");
+    tabla.insert(4, "d4");
+
+    cout << "Busqueda de claves insertadas: " << endl;
+    cout << "Clave 1: " << tabla.search(1) << endl;
+    cout << "Clave 2: " << tabla.search(2) << endl;
+    cout << "Clave 3: " << tabla.search(3) << endl;
+    cout << "Clave 4: " << tabla.search(4) << endl;
 
 
+    cout << "Clave 5 (no existente): " << tabla.search(5) << endl;
+
+    cout << "Eliminando clave 2..." << endl;
+    tabla.Delete(2);
+    cout << "Clave 2 despues de eliminar: " << tabla.search(2) << endl;
+
+    return 0;
 }
+
